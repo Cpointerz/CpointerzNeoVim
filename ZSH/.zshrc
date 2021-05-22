@@ -111,3 +111,6 @@ alias gita="git add ."
 alias gits="git status"
 #neovim
 alias n="nvim"
+#archlinux
+alias upgrade="sudo pacman -Syu"
+alias yayupgrade="yay -Syu"

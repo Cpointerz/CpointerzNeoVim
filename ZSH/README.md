@@ -9,3 +9,6 @@ gitc //git clone
 gita //git add .  
 gits //git status 
 n //nvim  
+upgrade //sudo pacman -Syu  
+yayupgrade //yay -Syu  
+
