@@ -10,6 +10,11 @@
 
 # 注意事项
 
+## 必须安装ctags
+sudo pacman -S ctags
+sudo apt install ctags
+sudo dnf install ctags
+
 ## 快速安装所有模块
 
 SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
