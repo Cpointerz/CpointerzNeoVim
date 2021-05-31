@@ -1,18 +1,29 @@
 "by Cpointerz
-"Version2.7.6
+"Version2.8.0
 
 "set
 set rtp+='~/.local/share/nvim/site/autoload/'
 set number
 set tabstop=4
 set shiftwidth=4
+syntax enable
+filetype plugin indent on
 
 "Install_plug
 call plug#begin()
+Plug 'preservim/tagbar'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+"set Tagbar
+nmap a :TagbarToggle<CR>
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
+let g:tagbar_width = 30
+let g:tagbar_right = 1
 
 "set themes
 let g:airline_theme="serene"
@@ -21,22 +32,12 @@ let g:airline_theme="serene"
 nmap <SPACE>r :call Compile_Run()<CR>
 function! Compile_Run()
   execute "w"
-  if &filetype == 'c'
-    execute "!clang % -o %<.exe"
-    execute "!%<.exe"
-  elseif &filetype == 'cpp'
-    execute "!clang++ % -o %<.exe"
-    execute "!%<.exe"
-  elseif &filetype == 'rust'
+  if &filetype == 'rust'
 	execute "!cargo run"
   elseif &filetype == 'java'
     execute "!java %"
   elseif &filetype == 'python'
     execute "!python3 %"
-  elseif &filetype == 'typescript'
-    execute "!tsc %"
-    execute "!node %<.js"
-  endif
 endfunction
 
 " air-line
@@ -69,7 +70,7 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap <SPACE>pi :PlugInstall<CR>
 
-nmap <SPACE>ci :CocInstall coc-explorer coc-clangd coc-rust-analyzer coc-java coc-pyright coc-tsserver<CR>
+nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright<CR>
 
 "update_plug function
 nmap <SPACE>pu :PlugUpdate<CR>

@@ -12,25 +12,7 @@
 
 ## 快速安装所有模块
 
-SPACE c i : 安装C/Rust/C++/Java/Python/TypeScript的语言支持模块
-
-## 初始化必看（不想要安装多与模块可看）
-
-Coc.nvim安装完成后按需求分别执行
-
-:CocInstall coc-explorer  //文件树
-
-:CocInstall coc-clangd //C支持需要clang,clangd
-
-:CocInstall coc-rust-analyzer //Rust支持
-
-:CocInstall coc-java //Java支持，需要Eclipse
-
-:CocInstall coc-pyright //pyton支持
-
-其他语言配置文件
-
-https://github.com/neoclide/coc.nvim/wiki/Language-servers
+SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
 
 # 已配置的快捷键
 
@@ -42,17 +24,19 @@ o :上一个buffer
 
 p :下一个buffer
 
+a :TagBar
+
 r : 创建Rust项目
 
-SPACE r :C/Rust/C++/Java/Python/TypeScript语言编译+运行
+SPACE r :Rust/Java/Python运行
 
-SPACE b :C/Rust/C++语言编译
+SPACE b :Rust编译
 
 SPACE p i :安装配置文件里指定的插件
 
 SPACE p u :更新配置文件里指定的插件
 
-SPACE c i : 安装C/Rust/C++/Java/Python/TypeScript的语言支持模块
+SPACE c i : 安装语言支持模块
 
 SPACE c u : 更新语言支持模块
 
