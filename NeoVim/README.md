@@ -11,9 +11,9 @@
 # 注意事项
 
 ## 必须安装ctags
-sudo pacman -S ctags
-sudo apt install ctags
-sudo dnf install ctags
+sudo pacman -S ctags  
+sudo apt install ctags  
+sudo dnf install ctags  
 
 ## 快速安装所有模块
 
