@@ -1,5 +1,5 @@
 "by Cpointerz
-"Version2.8.0
+"Version2.8.1
 
 "set
 set rtp+='~/.local/share/nvim/site/autoload/'
@@ -20,7 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "set Tagbar
-nmap a :TagbarToggle<CR>
+nmap e :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/usr/bin/ctags'
 let g:tagbar_width = 30
 let g:tagbar_right = 1
@@ -38,14 +38,15 @@ function! Compile_Run()
     execute "!java %"
   elseif &filetype == 'python'
     execute "!python3 %"
+endif
 endfunction
 
 " air-line
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
-"rust build
-nmap r :!cargo new 
+"set LEADER
+let mapleader="\<CR>"
 
 "buffer up
 nmap p :bn <CR>
@@ -54,15 +55,16 @@ nmap p :bn <CR>
 nmap o :bp <CR>
 
 "buffer number
-nmap 1 :b 1<CR>
-nmap 2 :b 2<CR>
-nmap 3 :b 3<CR>
-nmap 4 :b 4<CR>
-nmap 5 :b 5<CR>
-nmap 6 :b 6<CR>
-nmap 7 :b 7<CR>
-nmap 8 :b 8<CR>
-nmap 9 :b 9<CR>
+nnoremap ba<LEADER> :b 1<CR>
+nnoremap bs<LEADER> :b 2<CR>
+nnoremap bd<LEADER> :b 3<CR>
+nnoremap bf<LEADER> :b 4<CR>
+nnoremap bg<LEADER> :b 5<CR>
+nnoremap bh<LEADER> :b 6<CR>
+nnoremap bj<LEADER> :b 7<CR>
+nnoremap bk<LEADER> :b 8<CR>
+nnoremap bl<LEADER> :b 9<CR>
+nnoremap b;<LEADER> :b 0<CR>
 
 "C-W C-W maps to space f
 nmap f <C-w><C-w>
@@ -80,7 +82,7 @@ nmap <SPACE>cu :CocUpdate<CR>
 "set explorer
 nmap t :CocCommand explorer<CR>
 
-":w 
+":w
 nmap w :w<CR>
 ":q
 nmap q :q<CR>

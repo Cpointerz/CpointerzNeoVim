@@ -109,6 +109,7 @@ alias buildzsh="source ~/.zshrc"
 alias gitc="git clone"
 alias gita="git add ."
 alias gits="git status"
+alias gitlog="git log --graph"
 #neovim
 alias n="nvim"
 #archlinux

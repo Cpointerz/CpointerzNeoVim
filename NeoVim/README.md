@@ -11,9 +11,13 @@
 # 注意事项
 
 ## 必须安装ctags
+
+```shell
 sudo pacman -S ctags  
 sudo apt install ctags  
 sudo dnf install ctags  
+```
+
 
 ## 快速安装所有模块
 
@@ -21,15 +25,15 @@ SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
 
 # 已配置的快捷键
 
-## NORMAL模式
-
+## NORMAL模式  
+```
 t :文件树
 
 o :上一个buffer
 
 p :下一个buffer
 
-a :TagBar
+e :TagBar
 
 r : 创建Rust项目
 
@@ -51,10 +55,12 @@ w :保存文件
 
 q :退出
 
-1-9 :快速切换序号1-9的buffer
+b+ a/s/d/f/g/h/j/k/l/; +ENTER:快速切换序号0-9的buffer
 
 s:搜索
 
 , :上一个搜索结果
 
 . :下一个搜索结果
+```
+
