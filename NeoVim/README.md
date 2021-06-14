@@ -4,21 +4,16 @@
 
 # 安装
 
-在/.config/nvim/init.vim中使用init.vim文件
+在~/.config/nvim/中放置init.vim文件
 
-在~/.local/share/nvim/site/autoload/放置plug-vim
+在~/.config/nvim/autoload/放置plug-vim
 
 # 注意事项
 
-## 必须安装ctags
-
+## 可用脚本安装dein.vim  
 ```shell
-sudo pacman -S ctags  
-sudo apt install ctags  
-sudo dnf install ctags  
+sh ./install_dein.sh  
 ```
-
-
 ## 快速安装所有模块
 
 SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块

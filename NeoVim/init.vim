@@ -1,8 +1,8 @@
 "by Cpointerz
-"Version2.8.1
+"Version2.9.0
 
 "set
-set rtp+='~/.local/share/nvim/site/autoload/'
+set rtp+='~/.config/nvim/autoload/'
 set number
 set tabstop=4
 set shiftwidth=4
