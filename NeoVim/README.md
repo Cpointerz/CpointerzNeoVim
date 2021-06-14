@@ -22,15 +22,13 @@ SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
 
 ## NORMAL模式  
 ```
-t :文件树
+t :目录树
 
 o :上一个buffer
 
 p :下一个buffer
 
 e :TagBar
-
-r : 创建Rust项目
 
 SPACE r :Rust/Java/Python运行
 
@@ -52,10 +50,19 @@ q :退出
 
 b+ a/s/d/f/g/h/j/k/l/; +ENTER:快速切换序号0-9的buffer
 
-s:搜索
+fa CR :搜索单词
+
+ff CR :搜索文件
+
+fh CR :搜索记录
+
+tc CR :修改颜色
+
+fb CR :标签
 
 , :上一个搜索结果
 
 . :下一个搜索结果
+
 ```
 

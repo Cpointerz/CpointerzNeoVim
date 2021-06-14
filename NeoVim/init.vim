@@ -2,7 +2,9 @@
 "Version2.9.0
 
 "set
-set rtp+='~/.config/nvim/autoload/'
+set runtimepath+={~/.config/nvim/autoload}
+
+
 set number
 set tabstop=4
 set shiftwidth=4
@@ -10,14 +12,18 @@ syntax enable
 filetype plugin indent on
 
 "Install_plug
-call plug#begin()
-Plug 'preservim/tagbar'
-Plug 'rust-lang/rust.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-call plug#end()
+call dein#begin('~/.config/nvim/plug')
+
+call dein#add('glepnir/dashboard-nvim')
+call dein#add('liuchengxu/vim-clap')
+call dein#add('preservim/tagbar')
+call dein#add('rust-lang/rust.vim')
+call dein#add('vim-syntastic/syntastic')
+call dein#add('neoclide/coc.nvim', {'branch': 'release'})
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
+
+call dein#end()
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -40,6 +46,11 @@ function! Compile_Run()
     execute "!python3 %"
 endif
 endfunction
+
+"vim-clap
+let g:clap_layout = { 'relative': 'editor' }
+let g:clap_provider_alias = {'hist:': 'command_history'}
+let g:clap_theme = 'material_design_dark'
 
 " air-line
 let g:airline#extensions#tabline#enabled = 1
@@ -70,12 +81,12 @@ nnoremap b;<LEADER> :b 0<CR>
 nmap f <C-w><C-w>
 
 "Install_plug function
-nmap <SPACE>pi :PlugInstall<CR>
+nmap <SPACE>pi :call dein#install()<CR>
 
 nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright<CR>
 
 "update_plug function
-nmap <SPACE>pu :PlugUpdate<CR>
+nmap <SPACE>pu :call dein#update()<CR>
 
 nmap <SPACE>cu :CocUpdate<CR>
 
@@ -88,6 +99,43 @@ nmap w :w<CR>
 nmap q :q<CR>
 
 "search
-nmap s /
 nmap , N
 nmap . n
+
+
+"set dashboard-nvim
+
+let g:dashboard_custom_header = [
+     \ '',
+     \ '    .::                                   .::                            ',
+     \ ' .::   .::                   .:           .::                            ',
+     \ '.::       .: .::     .::       .:: .::  .:.: .:   .::    .: .:::.:::: .::',
+     \ '.::       .:  .::  .::  .:: .:: .::  .::  .::   .:   .::  .::        .:: ',
+     \ '.::       .:   .::.::    .::.:: .::  .::  .::  .::::: .:: .::      .::   ',
+     \ '.::   .:: :: .::  .::  .:: .:: .::  .::  .::  .:         .::     .::     ',
+     \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
+     \ '          .::                                                            ',
+     \ '                              V2.9.0                                     ',
+     \ '',
+     \ ]
+
+let g:dashboard_custom_shortcut={
+      \ 'last_session' : 's l CR',
+      \ 'find_history' : 'f h CR',
+      \ 'find_file' : 'f f CR',
+      \ 'new_file' : 'c n CR',
+      \ 'change_colorscheme' : 't c CR',
+      \ 'find_word' : 'f a CR',
+      \ 'book_marks' : 'f b CR',
+      \ }
+     
+nnoremap <silent> fh<Leader> :<C-u>Clap history<CR>
+nnoremap <silent> ff<Leader> :<C-u>Clap files<cr>
+nnoremap <silent> tc<Leader> :<C-u>Clap colors<CR>
+nnoremap <silent> fa<Leader> :<C-u>Clap blines<CR>
+nnoremap <silent> fb<Leader> :<C-u>Clap marks<CR>
+
+let g:dashboard_default_executive ='clap'
+
+nmap ss<Leader> :<C-u>SessionSave<CR>
+nmap sl<Leader> :<C-u>SessionLoad<CR>
