@@ -22,7 +22,7 @@ SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
 
 ## NORMAL模式  
 ```
-<SPACE> u <CR> :更新配置文件
+<SPACE> u <CR> :更新配置文件    (需要curl)
 
 t :目录树
 
