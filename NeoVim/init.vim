@@ -1,15 +1,14 @@
 "by Cpointerz
-"Version2.9.0
 
 "set
 set runtimepath+={~/.config/nvim/autoload}
-
-
+let mapleader="\<CR>"
 set number
 set tabstop=4
 set shiftwidth=4
 syntax enable
 filetype plugin indent on
+nnoremap <SPACE>u<LEADER> :!curl https://gitee.com/Cpointerz/develop-configuration/raw/master/NeoVim/init.vim > ~/.config/nvim/init.vim
 
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
@@ -24,6 +23,8 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 
 call dein#end()
+
+"==========key=========
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -56,9 +57,6 @@ let g:clap_theme = 'material_design_dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
-"set LEADER
-let mapleader="\<CR>"
-
 "buffer up
 nmap p :bn <CR>
 
@@ -83,7 +81,7 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap <SPACE>pi :call dein#install()<CR>
 
-nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright<CR>
+nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright coc-tsserver<CR>
 
 "update_plug function
 nmap <SPACE>pu :call dein#update()<CR>
@@ -103,7 +101,7 @@ nmap , N
 nmap . n
 
 
-"set dashboard-nvim
+"==========set dashboard-nvim==========
 
 let g:dashboard_custom_header = [
      \ '',
@@ -115,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.9.1                                    ',
+     \ '                               V2.9.3                                    ',
      \ '',
      \ ]
 
