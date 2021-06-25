@@ -6,7 +6,7 @@
 
 在~/.config/nvim/中放置init.vim文件
 
-在~/.config/nvim/autoload/放置plug-vim
+在~/.config/nvim/autoload/放置dein.vim
 
 # 注意事项
 
