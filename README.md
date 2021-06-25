@@ -16,7 +16,7 @@ sh ./install_dein.sh
 ```
 ## 快速安装所有模块
 
-SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
+SPACE p i + SPACE c i: 安装Rust/Java/Python/TS/JS的语言支持模块
 
 # 已配置的快捷键
 
