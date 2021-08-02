@@ -1,7 +1,7 @@
 "by Cpointerz
 
 "set
-set runtimepath+={~/.config/nvim/autoload}
+set runtimepath+='~/.config/nvim/autoload'
 let mapleader="\<CR>"
 set number
 set tabstop=4
@@ -13,14 +13,14 @@ nnoremap <SPACE>u<LEADER> :!curl https://gitee.com/Cpointerz/develop-configurati
 "Install_plug
 call plug#begin()
 
-Plug'glepnir/dashboard-nvim'
-Plug'liuchengxu/vim-clap'
-Plug'preservim/tagbar'
-Plug'rust-lang/rust.vim'
-Plug'vim-syntastic/syntastic'
-Plug'neoclide/coc.nvim', {'branch': 'release'}
-Plug'vim-airline/vim-airline'
-Plug'vim-airline/vim-airline-themes'
+Plug 'glepnir/dashboard-nvim'
+Plug 'liuchengxu/vim-clap'
+Plug 'preservim/tagbar'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -113,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.9.3                                    ',
+     \ '                               V2.9.4                                    ',
      \ '',
      \ ]
 
