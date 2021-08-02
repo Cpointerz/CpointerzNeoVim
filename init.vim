@@ -79,7 +79,7 @@ nnoremap b;<LEADER> :b 0<CR>
 nmap f <C-w><C-w>
 
 "Install_plug function
-nmap <SPACE>pi :call dein#install()<CR>
+nmap <SPACE>pi :PlugInstall<CR>
 
 nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright coc-tsserver<CR>
 
