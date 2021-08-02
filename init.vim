@@ -1,7 +1,7 @@
 "by Cpointerz
 
 "set
-set runtimepath+='~/.config/nvim/autoload'
+set rtp+='~/.config/nvim/autoload'
 let mapleader="\<CR>"
 set number
 set tabstop=4
