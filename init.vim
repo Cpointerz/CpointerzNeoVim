@@ -11,18 +11,18 @@ filetype plugin indent on
 nnoremap <SPACE>u<LEADER> :!curl https://gitee.com/Cpointerz/develop-configuration/raw/master/NeoVim/init.vim > ~/.config/nvim/init.vim<CR>
 
 "Install_plug
-call dein#begin('~/.config/nvim/plug')
+call plug#begin()
 
-call dein#add('glepnir/dashboard-nvim')
-call dein#add('liuchengxu/vim-clap')
-call dein#add('preservim/tagbar')
-call dein#add('rust-lang/rust.vim')
-call dein#add('vim-syntastic/syntastic')
-call dein#add('neoclide/coc.nvim', {'branch': 'release'})
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
+Plug'glepnir/dashboard-nvim'
+Plug'liuchengxu/vim-clap'
+Plug'preservim/tagbar'
+Plug'rust-lang/rust.vim'
+Plug'vim-syntastic/syntastic'
+Plug'neoclide/coc.nvim', {'branch': 'release'}
+Plug'vim-airline/vim-airline'
+Plug'vim-airline/vim-airline-themes'
 
-call dein#end()
+call plug#end()
 
 "==========key=========
 
