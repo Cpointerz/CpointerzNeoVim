@@ -18,7 +18,7 @@ call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
 call dein#add('rust-lang/rust.vim')
 call dein#add('vim-syntastic/syntastic')
-call dein#add('neoclide/coc.nvim', {'branch': 'release'})
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 
@@ -113,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.0                                   ',
+     \ '                               V2.10.1                                   ',
      \ '',
      \ ]
 
