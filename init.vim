@@ -6,7 +6,6 @@ let mapleader="\<CR>"
 set number
 set tabstop=4
 set shiftwidth=4
-syntax enable
 filetype plugin indent on
 nnoremap <SPACE>u<LEADER> :!curl https://gitee.com/Cpointerz/develop-configuration/raw/master/NeoVim/init.vim > ~/.config/nvim/init.vim<CR>
 
@@ -113,7 +112,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.1                                   ',
+     \ '                               V2.10.2                                   ',
      \ '',
      \ ]
 
