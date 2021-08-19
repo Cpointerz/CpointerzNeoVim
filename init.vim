@@ -1,7 +1,7 @@
 "by Cpointerz
 
 "set
-set rtp+='~/.config/nvim/autoload'
+set runtimepath+={~/.config/nvim/autoload}
 let mapleader="\<CR>"
 set number
 set tabstop=4
@@ -11,18 +11,18 @@ filetype plugin indent on
 nnoremap <SPACE>u<LEADER> :!curl https://gitee.com/Cpointerz/develop-configuration/raw/master/NeoVim/init.vim > ~/.config/nvim/init.vim<CR>
 
 "Install_plug
-call plug#begin()
+call dein#begin('~/.config/nvim/plug')
 
-Plug 'glepnir/dashboard-nvim'
-Plug 'liuchengxu/vim-clap'
-Plug 'preservim/tagbar'
-Plug 'rust-lang/rust.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+call dein#add('glepnir/dashboard-nvim')
+call dein#add('liuchengxu/vim-clap')
+call dein#add('preservim/tagbar')
+call dein#add('rust-lang/rust.vim')
+call dein#add('vim-syntastic/syntastic')
+call dein#add('neoclide/coc.nvim', {'branch': 'release'})
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 
-call plug#end()
+call dein#end()
 
 "==========key=========
 
@@ -79,7 +79,7 @@ nnoremap b;<LEADER> :b 0<CR>
 nmap f <C-w><C-w>
 
 "Install_plug function
-nmap <SPACE>pi :PlugInstall<CR>
+nmap <SPACE>pi :call dein#install()<CR>
 
 nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright coc-tsserver<CR>
 
@@ -113,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.9.4                                    ',
+     \ '                               V2.10.0                                   ',
      \ '',
      \ ]
 
