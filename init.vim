@@ -7,7 +7,6 @@ set number
 set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
-nnoremap <SPACE>u<LEADER> :!curl https://gitee.com/Cpointerz/develop-configuration/raw/master/NeoVim/init.vim > ~/.config/nvim/init.vim<CR>
 
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
