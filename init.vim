@@ -1,6 +1,7 @@
 "by Cpointerz
 
 "set
+set mouse=a
 set runtimepath+={~/.config/nvim/autoload}
 let mapleader="\<CR>"
 set number
@@ -111,7 +112,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.3                                   ',
+     \ '                               V2.10.4                                   ',
      \ '',
      \ ]
 
