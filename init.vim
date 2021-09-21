@@ -12,6 +12,7 @@ filetype plugin indent on
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
+call dein#add('preservim/nerdtree')
 call dein#add('glepnir/dashboard-nvim')
 call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
@@ -80,7 +81,7 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap <SPACE>pi :call dein#install()<CR>
 
-nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright coc-markdownlint<CR>
+nmap <SPACE>ci :CocInstall coc-java coc-pyright coc-markdownlint<CR>
 
 "update_plug function
 nmap <SPACE>pu :call dein#update()<CR>
@@ -88,7 +89,7 @@ nmap <SPACE>pu :call dein#update()<CR>
 nmap <SPACE>cu :CocUpdate<CR>
 
 "set explorer
-nmap t :CocCommand explorer<CR>
+nmap t :NERDTree<CR>
 
 ":w
 nmap w :w<CR>
@@ -112,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.4                                   ',
+     \ '                               V2.10.5                                   ',
      \ '',
      \ ]
 
