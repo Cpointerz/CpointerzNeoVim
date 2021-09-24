@@ -91,10 +91,13 @@ nmap <SPACE>cu :CocUpdate<CR>
 "set explorer
 nmap t :NERDTree<CR>
 
+"ESC 
+imap jk <ESC>
+
 ":w
-nmap w :w<CR>
+nnoremap w :w<CR>
 ":q
-nmap q :q<CR>
+nnoremap q :q<CR>
 
 "search
 nmap , N
