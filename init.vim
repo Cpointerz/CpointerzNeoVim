@@ -81,7 +81,7 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap <SPACE>pi :call dein#install()<CR>
 
-nmap <SPACE>ci :CocInstall coc-java coc-pyright coc-markdownlint<CR>
+nmap <SPACE>ci :CocInstall coc-java coc-pyright coc-clangd<CR>
 
 "update_plug function
 nmap <SPACE>pu :call dein#update()<CR>
@@ -116,7 +116,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.5                                   ',
+     \ '                               V2.10.6                                   ',
      \ '',
      \ ]
 
