@@ -45,6 +45,12 @@ function! Compile_Run()
     execute "!java %"
   elseif &filetype == 'python'
     execute "!python3 %"
+  elseif &filetype == 'c'
+    execute "!gcc % -o %<.exe"
+    execute "!%<.exe"
+  elseif &filetype == 'cpp'
+    execute "!g++ % -o %<.exe"
+    execute "!%<.exe"
 endif
 endfunction
 
