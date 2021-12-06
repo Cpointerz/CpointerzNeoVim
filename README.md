@@ -1,9 +1,10 @@
 # CpointerzNeoVim
 
-一个初二的小垃圾的配置文件。也就写着玩，刚好满足自己的需求。发上来只是为了让更多人了解到NeoVim
+一个初二的小垃圾的配置文件。也就写着玩，刚好满足自己的需求。发上来只是为了让更多人了解到NeoVim  
 
-# 安装
-
+#注意  
+如果保存文件时卡死COMMOND模式可用"""Ctrl + q""" 
+# 安装  
 在~/.config/nvim/中放置init.vim文件
 
 在~/.config/nvim/autoload/放置dein.vim
