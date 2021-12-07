@@ -97,6 +97,9 @@ nmap <SPACE>cu :CocUpdate<CR>
 "set explorer
 nmap t :NERDTree<CR>
 
+"new windows
+nmap v :vnew<CR>
+
 "ESC 
 imap jk <ESC>
 
