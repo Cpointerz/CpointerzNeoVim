@@ -21,10 +21,12 @@ call dein#add('vim-syntastic/syntastic')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-
+call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
 "==========key=========
+"set wakatime
+
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -125,7 +127,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.6                                   ',
+     \ '                               V2.10.7                                   ',
      \ '',
      \ ]
 
