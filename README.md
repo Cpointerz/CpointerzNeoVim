@@ -17,7 +17,7 @@ SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
 
 ## 首次使用
 
-''':WakaTimeDebugEnable''' + shell运行'''tail -f ~/.wakatime.log'''
+```:WakaTimeDebugEnable```+ shell运行```tail -f ~/.wakatime.log```
 
 # 已配置的快捷键
 
