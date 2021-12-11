@@ -1,6 +1,7 @@
 "by Cpointerz
 
 "set
+set mouse=a
 set runtimepath+={~/.config/nvim/autoload}
 let mapleader="\<CR>"
 set number
@@ -11,6 +12,7 @@ filetype plugin indent on
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
+call dein#add('preservim/nerdtree')
 call dein#add('glepnir/dashboard-nvim')
 call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
@@ -19,10 +21,12 @@ call dein#add('vim-syntastic/syntastic')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-
+call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
 "==========key=========
+"set wakatime
+
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -43,6 +47,12 @@ function! Compile_Run()
     execute "!java %"
   elseif &filetype == 'python'
     execute "!python3 %"
+  elseif &filetype == 'c'
+    execute "!gcc % -o %<.exe"
+    execute "!%<.exe"
+  elseif &filetype == 'cpp'
+    execute "!g++ % -o %<.exe"
+    execute "!%<.exe"
 endif
 endfunction
 
@@ -79,7 +89,7 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap <SPACE>pi :call dein#install()<CR>
 
-nmap <SPACE>ci :CocInstall coc-explorer coc-java coc-pyright coc-markdownlint<CR>
+nmap <SPACE>ci :CocInstall coc-java coc-pyright coc-clangd<CR>
 
 "update_plug function
 nmap <SPACE>pu :call dein#update()<CR>
@@ -87,12 +97,18 @@ nmap <SPACE>pu :call dein#update()<CR>
 nmap <SPACE>cu :CocUpdate<CR>
 
 "set explorer
-nmap t :CocCommand explorer<CR>
+nmap t :NERDTree<CR>
+
+"new windows
+nmap v :vnew<CR>
+
+"ESC 
+imap jk <ESC>
 
 ":w
-nmap w :w<CR>
+nnoremap w :w<CR>
 ":q
-nmap q :q<CR>
+nnoremap q :q<CR>
 
 "search
 nmap , N
@@ -111,7 +127,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.3                                   ',
+     \ '                               V2.10.7                                   ',
      \ '',
      \ ]
 
