@@ -23,6 +23,7 @@ p i + c i: 安装Rust/Java/Python的语言支持模块
 
 ## NORMAL模式  
 ```
+u :更新配置文件
 
 t :目录树
 
