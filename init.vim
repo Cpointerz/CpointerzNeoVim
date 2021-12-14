@@ -25,8 +25,8 @@ call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
 "==========key=========
-"set wakatime
-
+"update
+nmap u:! curl https://gitee.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -38,7 +38,7 @@ let g:tagbar_right = 1
 let g:airline_theme="serene"
 
 " Compile function
-nmap <SPACE>r :call Compile_Run()<CR>
+nmap r :call Compile_Run()<CR>
 function! Compile_Run()
   execute "w"
   if &filetype == 'rust'
@@ -87,14 +87,14 @@ nnoremap b;<LEADER> :b 0<CR>
 nmap f <C-w><C-w>
 
 "Install_plug function
-nmap <SPACE>pi :call dein#install()<CR>
+nmap pi :call dein#install()<CR>
 
-nmap <SPACE>ci :CocInstall coc-java coc-pyright coc-clangd<CR>
+nmap ci :CocInstall coc-java coc-pyright coc-clangd<CR>
 
 "update_plug function
-nmap <SPACE>pu :call dein#update()<CR>
+nmap pu :call dein#update()<CR>
 
-nmap <SPACE>cu :CocUpdate<CR>
+nmap cu :CocUpdate<CR>
 
 "set explorer
 nmap t :NERDTree<CR>
@@ -127,7 +127,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.7                                   ',
+     \ '                                V3.0.0                                   ',
      \ '',
      \ ]
 
