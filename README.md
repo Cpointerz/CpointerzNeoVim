@@ -13,7 +13,7 @@
 
 ## 快速安装所有模块
 
-SPACE p i + SPACE c i: 安装Rust/Java/Python的语言支持模块
+p i + c i: 安装Rust/Java/Python的语言支持模块
 
 ## 首次使用
 
@@ -32,17 +32,17 @@ p :下一个buffer
 
 e :TagBar
 
-SPACE r :Rust/Java/Python运行
+r :Rust/Java/Python运行
 
-SPACE b :Rust编译
+b :Rust编译
 
-SPACE p i :安装配置文件里指定的插件
+p i :安装配置文件里指定的插件
 
-SPACE p u :更新配置文件里指定的插件
+p u :更新配置文件里指定的插件
 
-SPACE c i : 安装语言支持模块
+c i : 安装语言支持模块
 
-SPACE c u : 更新语言支持模块
+c u : 更新语言支持模块
 
 f :分屏切换
 
