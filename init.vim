@@ -9,6 +9,7 @@ set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
 
+
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
@@ -16,8 +17,6 @@ call dein#add('preservim/nerdtree')
 call dein#add('glepnir/dashboard-nvim')
 call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
-call dein#add('rust-lang/rust.vim')
-call dein#add('vim-syntastic/syntastic')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
@@ -89,7 +88,7 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap pi :call dein#install()<CR>
 
-nmap ci :CocInstall coc-java coc-pyright coc-clangd<CR>
+nmap ci :CocInstall coc-java coc-pyright coc-clangd coc-rust-analyzer<CR>
 
 "update_plug function
 nmap pu :call dein#update()<CR>
