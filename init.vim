@@ -1,6 +1,7 @@
 "by Cpointerz
 
 "set
+set encoding=utf-8
 set mouse=a
 set runtimepath+={~/.config/nvim/autoload}
 let mapleader="\<CR>"
@@ -9,6 +10,7 @@ set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
 
+
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
@@ -16,8 +18,6 @@ call dein#add('preservim/nerdtree')
 call dein#add('glepnir/dashboard-nvim')
 call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
-call dein#add('rust-lang/rust.vim')
-call dein#add('vim-syntastic/syntastic')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
@@ -25,8 +25,8 @@ call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
 "==========key=========
-"set wakatime
-
+"update
+nmap u :!curl https://gitee.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim<CR>
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -37,25 +37,6 @@ let g:tagbar_right = 1
 "set themes
 let g:airline_theme="serene"
 
-" Compile function
-nmap <SPACE>r :call Compile_Run()<CR>
-function! Compile_Run()
-  execute "w"
-  if &filetype == 'rust'
-	execute "!cargo run"
-  elseif &filetype == 'java'
-    execute "!java %"
-  elseif &filetype == 'python'
-    execute "!python3 %"
-  elseif &filetype == 'c'
-    execute "!gcc % -o %<.exe"
-    execute "!%<.exe"
-  elseif &filetype == 'cpp'
-    execute "!g++ % -o %<.exe"
-    execute "!%<.exe"
-endif
-endfunction
-
 "vim-clap
 let g:clap_layout = { 'relative': 'editor' }
 let g:clap_provider_alias = {'hist:': 'command_history'}
@@ -64,12 +45,6 @@ let g:clap_theme = 'material_design_dark'
 " air-line
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
-"buffer up
-nmap p :bn <CR>
-
-"buffer down
-nmap o :bp <CR>
 
 "buffer number
 nnoremap ba<LEADER> :b 1<CR>
@@ -87,14 +62,14 @@ nnoremap b;<LEADER> :b 0<CR>
 nmap f <C-w><C-w>
 
 "Install_plug function
-nmap <SPACE>pi :call dein#install()<CR>
+nmap pi :call dein#install()<CR>
 
-nmap <SPACE>ci :CocInstall coc-java coc-pyright coc-clangd<CR>
+nmap ci :CocInstall coc-java coc-pyright coc-rls<CR>
 
 "update_plug function
-nmap <SPACE>pu :call dein#update()<CR>
+nmap pu :call dein#update()<CR>
 
-nmap <SPACE>cu :CocUpdate<CR>
+nmap cu :CocUpdate<CR>
 
 "set explorer
 nmap t :NERDTree<CR>
@@ -110,10 +85,17 @@ nnoremap w :w<CR>
 ":q
 nnoremap q :q<CR>
 
-"search
-nmap , N
-nmap . n
+"set TAB
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 "==========set dashboard-nvim==========
 
@@ -127,7 +109,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                               V2.10.7                                   ',
+     \ '                                V3.0.3                                   ',
      \ '',
      \ ]
 
