@@ -10,7 +10,6 @@ set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
 
-
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
@@ -21,7 +20,7 @@ call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
+call dein#add('morhetz/gruvbox')
 call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
@@ -36,7 +35,8 @@ let g:tagbar_width = 30
 let g:tagbar_right = 1
 
 "set themes
-let g:airline_theme="serene"
+colorscheme gruvbox
+set background=dark
 
 "vim-clap
 let g:clap_layout = { 'relative': 'editor' }
@@ -59,13 +59,10 @@ nnoremap bk<LEADER> :b 8<CR>
 nnoremap bl<LEADER> :b 9<CR>
 nnoremap b;<LEADER> :b 0<CR>
 
-"C-W C-W maps to space f
-nmap f <C-w><C-w>
-
 "Install_plug function
 nmap pi :call dein#install()<CR>
 
-nmap ci :CocInstall coc-java coc-pyright coc-rust-analyzer<CR>
+nmap ci :CocInstall coc-pyright coc-rust-analyzer<CR>
 
 "update_plug function
 nmap pu :DeinUpdate<CR>
@@ -110,7 +107,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.0.4                                   ',
+     \ '                                V3.1.0                                   ',
      \ '',
      \ ]
 
