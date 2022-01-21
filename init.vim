@@ -14,6 +14,7 @@ filetype plugin indent on
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
+call dein#add('wsdjeg/dein-ui.vim')
 call dein#add('preservim/nerdtree')
 call dein#add('glepnir/dashboard-nvim')
 call dein#add('liuchengxu/vim-clap')
@@ -64,10 +65,10 @@ nmap f <C-w><C-w>
 "Install_plug function
 nmap pi :call dein#install()<CR>
 
-nmap ci :CocInstall coc-java coc-pyright coc-rls<CR>
+nmap ci :CocInstall coc-java coc-pyright coc-rust-analyzer<CR>
 
 "update_plug function
-nmap pu :call dein#update()<CR>
+nmap pu :DeinUpdate<CR>
 
 nmap cu :CocUpdate<CR>
 
@@ -109,7 +110,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.0.3                                   ',
+     \ '                                V3.0.4                                   ',
      \ '',
      \ ]
 
