@@ -15,9 +15,8 @@
 
 p i + c i: 安装Rust/Java/Python的语言支持模块
 
-## 首次使用
-
-```:WakaTimeDebugEnable```+ shell运行```tail -f ~/.wakatime.log```
+## 首次使用  
+安装universal-ctags npm git
 
 # 已配置的快捷键
 
@@ -36,8 +35,6 @@ p u :更新配置文件里指定的插件
 c i : 安装语言支持模块
 
 c u : 更新语言支持模块
-
-f :分屏切换
 
 n :纵向窗口分割
 
@@ -61,8 +58,7 @@ fb CR :标签
 
 . :下一个搜索结果
 
-```
-
+```  
 
 ## INSERT模式
 ```  
