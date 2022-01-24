@@ -71,6 +71,7 @@ nmap cu :CocUpdate<CR>
 
 "set explorer
 nmap t :NERDTree<CR>
+autocmd VimEnter * NERDTree | wincmd p
 
 "new windows
 nmap v :vnew<CR>
@@ -107,7 +108,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.0                                   ',
+     \ '                                V3.1.1                                   ',
      \ '',
      \ ]
 
