@@ -29,7 +29,7 @@ call dein#end()
 
 "==========key=========
 "update
-nmap u :!curl https://raw.githubusercontent.com/Cpointerz/CpointerzNeoVim/master/init.vim > ~/.config/nvim/init.vim<CR>
+nmap u :!curl https://gitee.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim<CR>
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
