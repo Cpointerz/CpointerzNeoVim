@@ -10,6 +10,9 @@ set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
 
+"update rust nightly
+nnoremap r :silent exec "!rustup update nightly > CpointerzNeovim_log.txt"<CR>
+
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
@@ -26,7 +29,7 @@ call dein#end()
 
 "==========key=========
 "update
-nmap u :!curl https://gitee.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim<CR>
+nmap u :!curl https://github.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim<CR>
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -72,6 +75,7 @@ nmap cu :CocUpdate<CR>
 "set explorer
 nmap t :NERDTree<CR>
 autocmd VimEnter * NERDTree | wincmd p
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 "new windows
 nmap v :vnew<CR>
@@ -108,7 +112,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.1                                   ',
+     \ '                                V3.1.2                                   ',
      \ '',
      \ ]
 
