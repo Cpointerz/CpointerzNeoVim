@@ -23,7 +23,7 @@ call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
-call dein#add('morhetz/gruvbox')
+call dein#add('kaicataldo/material.vim')
 call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
@@ -38,8 +38,9 @@ let g:tagbar_width = 30
 let g:tagbar_right = 1
 
 "set themes
-colorscheme gruvbox
-set background=dark
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'ocean'
+colorscheme material
 
 "vim-clap
 let g:clap_layout = { 'relative': 'editor' }
