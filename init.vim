@@ -24,7 +24,6 @@ call dein#add('preservim/tagbar')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
 call dein#add('kaicataldo/material.vim')
-call dein#add('wakatime/vim-wakatime')
 call dein#end()
 
 "==========key=========
@@ -66,7 +65,7 @@ nnoremap b;<LEADER> :b 0<CR>
 "Install_plug function
 nmap pi :call dein#install()<CR>
 
-nmap ci :CocInstall coc-pyright coc-rust-analyzer<CR>
+nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd<CR>
 
 "update_plug function
 nmap pu :DeinUpdate<CR>
@@ -79,15 +78,21 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 "new windows
-nmap v :vnew<CR>
+nmap n :vnew<CR>
 
 "ESC 
 imap jk <ESC>
 
-":w
+"write
 nnoremap w :w<CR>
-":q
+"close
 nnoremap q :q<CR>
+
+"tab
+nnoremap tn  :tabnew<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tc  :tabclose<CR>
 
 "set TAB
 inoremap <silent><expr> <TAB>
@@ -113,7 +118,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.2                                   ',
+     \ '                                V3.1.3                                   ',
      \ '',
      \ ]
 
