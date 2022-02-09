@@ -23,6 +23,18 @@ p i + c i: 安装Rust/Java/Python的语言支持模块
 
 ## NORMAL模式  
 ```
+sv :左右切割屏幕
+
+sp :上下切割屏幕
+
+sh :切换至左边屏幕
+
+sl :切换至右边屏幕
+
+sj :切换至下面屏幕
+
+sk :切换至上面屏幕
+
 tn :新建TAB
 
 tj :切换至下一个TAB
@@ -50,8 +62,6 @@ n :纵向窗口分割
 w :保存文件
 
 q :退出
-
-b+ a/s/d/f/g/h/j/k/l/; +ENTER:快速切换序号0-9的buffer
 
 fa CR :搜索单词
 
