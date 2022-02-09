@@ -23,6 +23,14 @@ p i + c i: 安装Rust/Java/Python的语言支持模块
 
 ## NORMAL模式  
 ```
+tn :新建TAB
+
+tj :切换至下一个TAB
+
+tk :切换至上一个TAB
+
+tc :关闭TAB
+
 u :更新配置文件
 
 t :目录树
