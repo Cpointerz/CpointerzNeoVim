@@ -1,6 +1,6 @@
 "by Cpointerz
 
-"set
+"========================= set =========================
 set encoding=utf-8
 set mouse=a
 set runtimepath+={~/.config/nvim/autoload}
@@ -23,10 +23,11 @@ call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
-call dein#add('kaicataldo/material.vim')
+call dein#add('morhetz/gruvbox')
+call dein#add('ryanoasis/vim-devicons')
 call dein#end()
 
-"==========key=========
+"========================= key ========================= 
 "update
 nmap u :!curl https://gitee.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim<CR>
 
@@ -37,9 +38,8 @@ let g:tagbar_width = 30
 let g:tagbar_right = 1
 
 "set themes
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'ocean'
-colorscheme material
+colorscheme gruvbox
+set background=dark
 
 "vim-clap
 let g:clap_layout = { 'relative': 'editor' }
@@ -73,7 +73,7 @@ nmap pu :DeinUpdate<CR>
 nmap cu :CocUpdate<CR>
 
 "set explorer
-nmap t :NERDTree<CR>
+nmap tt :NERDTree<CR>
 autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
@@ -106,7 +106,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-"==========set dashboard-nvim==========
+"========================= set dashboard-nvim =========================
 
 let g:dashboard_custom_header = [
      \ '',
@@ -118,7 +118,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.3                                   ',
+     \ '                                V3.1.4                                   ',
      \ '',
      \ ]
 
