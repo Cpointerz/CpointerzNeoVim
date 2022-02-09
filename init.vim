@@ -10,9 +10,6 @@ set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
 
-"update rust nightly
-nnoremap r :silent exec "!rustup update nightly > CpointerzNeovim_log.txt"<CR>
-
 "Install_plug
 call dein#begin('~/.config/nvim/plug')
 
@@ -50,18 +47,6 @@ let g:clap_theme = 'material_design_dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
-"buffer number
-nnoremap ba<LEADER> :b 1<CR>
-nnoremap bs<LEADER> :b 2<CR>
-nnoremap bd<LEADER> :b 3<CR>
-nnoremap bf<LEADER> :b 4<CR>
-nnoremap bg<LEADER> :b 5<CR>
-nnoremap bh<LEADER> :b 6<CR>
-nnoremap bj<LEADER> :b 7<CR>
-nnoremap bk<LEADER> :b 8<CR>
-nnoremap bl<LEADER> :b 9<CR>
-nnoremap b;<LEADER> :b 0<CR>
-
 "Install_plug function
 nmap pi :call dein#install()<CR>
 
@@ -78,7 +63,12 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 "new windows
-nmap n :vnew<CR>
+nnoremap sv :vs<CR>
+nnoremap sp :sp<CR>
+nnoremap sl <c-w><c-l>
+nnoremap sh <c-w><c-h>
+nnoremap sj <c-w><c-j>
+nnoremap sk <c-w><c-k>
 
 "ESC 
 imap jk <ESC>
@@ -118,7 +108,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.4                                   ',
+     \ '                                V3.1.5                                   ',
      \ '',
      \ ]
 
