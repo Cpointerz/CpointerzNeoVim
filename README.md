@@ -16,7 +16,7 @@
 p i + c i: 安装Rust/Java/Python的语言支持模块
 
 ## 首次使用  
-安装universal-ctags npm git
+安装universal-ctags npm git  
 安装字体FiraCode和[nerd-fonts(FiraCode)](https://github.com/ryanoasis/nerd-fonts)
 
 # 已配置的快捷键
@@ -33,7 +33,7 @@ tc :关闭TAB
 
 u :更新配置文件
 
-t :目录树
+tt :目录树
 
 e :TagBar
 
@@ -62,10 +62,6 @@ fh CR :搜索记录
 tc CR :修改颜色
 
 fb CR :标签
-
-, :上一个搜索结果
-
-. :下一个搜索结果
 
 ```  
 
