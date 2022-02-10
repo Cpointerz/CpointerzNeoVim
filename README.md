@@ -20,6 +20,8 @@ p i + c i: 安装Rust/Java/Python的语言支持模块
 
 ## NORMAL模式  
 ```
+fs :保存会话  
+fl :加载会话  
 sv :左右切割屏幕  
 sp :上下切割屏幕  
 sh :切换至左边屏幕  
