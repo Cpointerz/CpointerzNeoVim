@@ -16,10 +16,6 @@
 ## 快速安装所有模块  
 p i + c i: 安装Rust/Java/Python的语言支持模块  
 
-## 首次使用  
-安装```sudo apt install universal-ctags npm git fonts-firacode clangd```  
-[nerd-fonts(FiraCode)需要额外安装](https://github.com/ryanoasis/nerd-fonts)
-
 # 已配置的快捷键
 
 ## NORMAL模式  
