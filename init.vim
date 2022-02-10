@@ -117,14 +117,14 @@ let g:dashboard_custom_shortcut={
       \ 'find_history' : 'f h CR',
       \ 'find_file' : 'f f CR',
       \ 'new_file' : 'c n CR',
-      \ 'change_colorscheme' : 't c CR',
+      \ 'change_colorscheme' : 'f c CR',
       \ 'find_word' : 'f a CR',
       \ 'book_marks' : 'f b CR',
       \ }
      
 nnoremap <silent> fh<Leader> :<C-u>Clap history<CR>
 nnoremap <silent> ff<Leader> :<C-u>Clap files<cr>
-nnoremap <silent> tc<Leader> :<C-u>Clap colors<CR>
+nnoremap <silent> fc<Leader> :<C-u>Clap colors<CR>
 nnoremap <silent> fa<Leader> :<C-u>Clap blines<CR>
 nnoremap <silent> fb<Leader> :<C-u>Clap marks<CR>
 
