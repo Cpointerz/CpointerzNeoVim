@@ -132,3 +132,10 @@ let g:dashboard_default_executive ='clap'
 
 nmap fs<Leader> :<C-u>SessionSave<CR>
 nmap fl<Leader> :<C-u>SessionLoad<CR>
+
+"========================= Symbol matching =========================
+inoremap ( () <LEFT>
+inoremap { {} <LEFT>
+inoremap [ [] <LEFT>
+inoremap ' '' <LEFT>
+inoremap " "" <LEFT>
