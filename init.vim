@@ -130,5 +130,5 @@ nnoremap <silent> fb<Leader> :<C-u>Clap marks<CR>
 
 let g:dashboard_default_executive ='clap'
 
-nmap ss<Leader> :<C-u>SessionSave<CR>
-nmap sl<Leader> :<C-u>SessionLoad<CR>
+nmap fs<Leader> :<C-u>SessionSave<CR>
+nmap fl<Leader> :<C-u>SessionLoad<CR>
