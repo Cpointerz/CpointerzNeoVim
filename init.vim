@@ -135,7 +135,7 @@ nmap fl<Leader> :<C-u>SessionLoad<CR>
 
 "========================= Symbol matching =========================
 inoremap ( () <LEFT><LEFT>
-inoremap { {} <LEFT><LEFT>
+inoremap { {} <LEFT><LEFT><CR><CR><UP><TAB>
 inoremap [ [] <LEFT><LEFT>
 inoremap ' '' <LEFT><LEFT>
 inoremap " "" <LEFT><LEFT>
