@@ -113,7 +113,7 @@ let g:dashboard_custom_header = [
      \ ]
 
 let g:dashboard_custom_shortcut={
-      \ 'last_session' : 's l CR',
+      \ 'last_session' : 'f l CR',
       \ 'find_history' : 'f h CR',
       \ 'find_file' : 'f f CR',
       \ 'new_file' : 'c n CR',
