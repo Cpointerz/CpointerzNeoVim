@@ -134,8 +134,8 @@ nmap fs<Leader> :<C-u>SessionSave<CR>
 nmap fl<Leader> :<C-u>SessionLoad<CR>
 
 "========================= Symbol matching =========================
-inoremap ( () <LEFT>
-inoremap { {} <LEFT>
-inoremap [ [] <LEFT>
-inoremap ' '' <LEFT>
-inoremap " "" <LEFT>
+inoremap ( () <LEFT><LEFT>
+inoremap { {} <LEFT><LEFT>
+inoremap [ [] <LEFT><LEFT>
+inoremap ' '' <LEFT><LEFT>
+inoremap " "" <LEFT><LEFT>
