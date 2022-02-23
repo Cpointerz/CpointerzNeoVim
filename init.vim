@@ -108,7 +108,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.5                                   ',
+     \ '                                V3.1.6                                   ',
      \ '',
      \ ]
 
@@ -134,8 +134,8 @@ nmap fs<Leader> :<C-u>SessionSave<CR>
 nmap fl<Leader> :<C-u>SessionLoad<CR>
 
 "========================= Symbol matching =========================
-inoremap ( () <LEFT><LEFT>
-inoremap { {} <LEFT><LEFT><CR><CR><UP><TAB>
-inoremap [ [] <LEFT><LEFT>
-inoremap ' '' <LEFT><LEFT>
-inoremap " "" <LEFT><LEFT>
+inoremap ( ()<LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
