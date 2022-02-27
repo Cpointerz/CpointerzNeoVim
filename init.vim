@@ -20,6 +20,9 @@ call dein#add('liuchengxu/vim-clap')
 call dein#add('preservim/tagbar')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('vim-airline/vim-airline')
+call dein#add('kyazdani42/nvim-web-devicons')
+call dein#add('ryanoasis/vim-devicons')
+Plug 'akinsho/bufferline.nvim'
 call dein#add('morhetz/gruvbox')
 call dein#add('ryanoasis/vim-devicons')
 call dein#end()
@@ -37,6 +40,7 @@ let g:tagbar_right = 1
 "set themes
 colorscheme gruvbox
 set background=dark
+set termguicolors
 
 "vim-clap
 let g:clap_layout = { 'relative': 'editor' }
