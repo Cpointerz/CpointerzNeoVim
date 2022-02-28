@@ -140,7 +140,6 @@ nmap fl<Leader> :<C-u>SessionLoad<CR>
 
 "========================= Symbol matching =========================
 inoremap ( ()<LEFT>
-inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
