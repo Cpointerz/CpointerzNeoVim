@@ -11,21 +11,19 @@ set shiftwidth=4
 filetype plugin indent on
 
 "Install_plug
-call dein#begin('~/.config/nvim/plug')
+call plug#begin('~/.config/nvim/plug')
 
-call dein#add('wsdjeg/dein-ui.vim')
-call dein#add('preservim/nerdtree')
-call dein#add('glepnir/dashboard-nvim')
-call dein#add('liuchengxu/vim-clap')
-call dein#add('preservim/tagbar')
-call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
-call dein#add('vim-airline/vim-airline')
-call dein#add('kyazdani42/nvim-web-devicons')
-call dein#add('ryanoasis/vim-devicons')
+Plug 'preservim/nerdtree'
+Plug 'glepnir/dashboard-nvim'
+Plug 'liuchengxu/vim-clap'
+Plug 'preservim/tagbar'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
-call dein#add('morhetz/gruvbox')
-call dein#add('ryanoasis/vim-devicons')
-call dein#end()
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
 
 "========================= key ========================= 
 "update
@@ -41,6 +39,9 @@ let g:tagbar_right = 1
 colorscheme gruvbox
 set background=dark
 set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
 
 "vim-clap
 let g:clap_layout = { 'relative': 'editor' }
@@ -52,12 +53,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "Install_plug function
-nmap pi :call dein#install()<CR>
+nmap pi :PlugInstall<CR>
 
 nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd<CR>
 
 "update_plug function
-nmap pu :DeinUpdate<CR>
+nmap pu :PlugUpdate<CR>
 
 nmap cu :CocUpdate<CR>
 
@@ -112,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.6                                   ',
+     \ '                                V3.2.0                                   ',
      \ '',
      \ ]
 
