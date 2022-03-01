@@ -85,8 +85,8 @@ nnoremap q :q<CR>
 
 "tab
 nnoremap tn :tabnew<CR>
-nnoremap th :BufferLineCycleNext<CR>
-nnoremap tl :BufferLineCyclePrev<CR>
+nnoremap tl :BufferLineCycleNext<CR>
+nnoremap th :BufferLineCyclePrev<CR>
 nnoremap tc :tabclose<CR>
 nnoremap tb :BufferLinePick<CR>
 
