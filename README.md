@@ -29,8 +29,9 @@ sl :切换至右边屏幕
 sj :切换至下面屏幕  
 sk :切换至上面屏幕  
 tn :新建TAB  
-tj :切换至下一个TAB  
-tk :切换至上一个TAB  
+tl :切换至下一个TAB  
+th :切换至上一个TAB 
+tb :切换至映射Buffer区，并可用字母快速切换Buffer 
 tc :关闭TAB  
 u :更新配置文件  
 tt :目录树  
