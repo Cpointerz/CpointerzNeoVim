@@ -69,9 +69,6 @@ nnoremap sh <c-w><c-h>
 nnoremap sj <c-w><c-j>
 nnoremap sk <c-w><c-k>
 
-"ESC 
-imap jk <ESC>
-
 "write
 nnoremap w :w<CR>
 "close
@@ -131,10 +128,3 @@ let g:dashboard_default_executive ='clap'
 
 nmap fs<Leader> :<C-u>SessionSave<CR>
 nmap fl<Leader> :<C-u>SessionLoad<CR>
-
-"========================= Symbol matching =========================
-inoremap ( ()<LEFT>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ' ''<LEFT>
-inoremap " ""<LEFT>
