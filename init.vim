@@ -13,20 +13,18 @@ filetype plugin indent on
 "Install_plug
 call plug#begin('~/.config/nvim/plug')
 
-Plug 'preservim/nerdtree'
-Plug 'glepnir/dashboard-nvim'
-Plug 'liuchengxu/vim-clap'
-Plug 'preservim/tagbar'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'akinsho/bufferline.nvim'
-Plug 'morhetz/gruvbox'
-Plug 'ryanoasis/vim-devicons'
+Plug 'https://hub.fastgit.xyz/preservim/nerdtree'
+Plug 'https://hub.fastgit.xyz/glepnir/dashboard-nvim'
+Plug 'https://hub.fastgit.xyz/liuchengxu/vim-clap'
+Plug 'https://hub.fastgit.xyz/preservim/tagbar'
+Plug 'https://hub.fastgit.xyz/neoclide/coc.nvim', {'branch': 'release'}
+Plug 'https://hub.fastgit.xyz/kyazdani42/nvim-web-devicons'
+Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim'
+Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
+Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
 call plug#end()
 
 "========================= key ========================= 
-"update
-nmap u :!curl https://gitee.com/Cpointerz/CpointerzNeoVim/raw/master/init.vim > ~/.config/nvim/init.vim<CR>
 
 "set Tagbar
 nmap e :TagbarToggle<CR>
@@ -37,6 +35,7 @@ let g:tagbar_right = 1
 "set themes
 colorscheme gruvbox
 set background=dark
+
 set termguicolors
 lua << EOF
 require("bufferline").setup{}
@@ -46,10 +45,6 @@ EOF
 let g:clap_layout = { 'relative': 'editor' }
 let g:clap_provider_alias = {'hist:': 'command_history'}
 let g:clap_theme = 'material_design_dark'
-
-" air-line
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "Install_plug function
 nmap pi :PlugInstall<CR>
@@ -83,11 +78,10 @@ nnoremap w :w<CR>
 nnoremap q :q<CR>
 
 "tab
-nnoremap tn :tabnew<CR>
-nnoremap tl :BufferLineCycleNext<CR>
-nnoremap th :BufferLineCyclePrev<CR>
-nnoremap tc :tabclose<CR>
-nnoremap tb :BufferLinePick<CR>
+nnoremap tn  :tabnew<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tc  :tabclose<CR>
 
 "set TAB
 inoremap <silent><expr> <TAB>
@@ -113,7 +107,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.2.0                                   ',
+     \ '                                V3.1.6                                   ',
      \ '',
      \ ]
 
@@ -140,6 +134,7 @@ nmap fl<Leader> :<C-u>SessionLoad<CR>
 
 "========================= Symbol matching =========================
 inoremap ( ()<LEFT>
+inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
