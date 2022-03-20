@@ -56,6 +56,8 @@ nmap pu :PlugUpdate<CR>
 
 nmap cu :CocUpdate<CR>
 
+nnoremap cc :CocList<CR>
+
 "set explorer
 nmap tt :NERDTree<CR>
 autocmd VimEnter * NERDTree | wincmd p
@@ -104,7 +106,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.6                                   ',
+     \ '                                V3.1.7                                   ',
      \ '',
      \ ]
 
