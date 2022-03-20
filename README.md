@@ -3,9 +3,11 @@
 一个初三的小垃圾的配置文件。也就写着玩，刚好满足自己的需求。发上来只是为了让更多人了解到NeoVim  
 
 # 安装  
-在~/.config/nvim/中放置init.vim文件
-
-在~/.config/nvim/autoload/放置plug.vim
+```
+git clone https://gitee.com/Cpointerz/CpointerzNeoVim.git ~/.config/nvim  
+mkdir ~/.config/nvim/autoload/  
+curl https://gitee.com/Cpointerz/vim-plug/raw/master/plug.vim > ~/.config/nvim/autoload/plug.vim  
+```
 
 # 注意事项  
 
@@ -32,14 +34,14 @@ tn :新建TAB
 tl :切换至下一个TAB  
 th :切换至上一个TAB 
 tb :切换至映射Buffer区，并可用字母快速切换Buffer 
-tc :关闭TAB  
-u :更新配置文件  
+tc :关闭TAB   
 tt :目录树  
 e :TagBar  
-p i :安装配置文件里指定的插件  
-p u :更新配置文件里指定的插件  
-c i : 安装语言支持模块  
-c u : 更新语言支持模块  
+pi :安装配置文件里指定的插件  
+pu :更新配置文件里指定的插件  
+ci :安装语言支持模块  
+cu :更新语言支持模块  
+cc :CocList  
 w :保存文件  
 q :退出  
 fa CR :搜索单词  
