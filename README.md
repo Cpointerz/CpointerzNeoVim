@@ -52,7 +52,6 @@ fb CR :标签
 ```  
 ## INSERT模式
 ```  
-jk :ESC  
 Tab :下一个补全选项  
-Shift Tab :上一个补全选项
+Shift Tab :上一个补全选项  
 ```
