@@ -77,10 +77,11 @@ nnoremap w :w<CR>
 nnoremap q :q<CR>
 
 "tab
-nnoremap tn  :tabnew<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tc  :tabclose<CR>
+nnoremap tn :tabnew<CR>
+nnoremap tl :BufferLineCycleNext<CR>
+nnoremap th :BufferLineCyclePrev<CR>
+nnoremap tb :BufferLinePick<CR>
+nnoremap tc :tabclose<CR>
 
 "set TAB
 inoremap <silent><expr> <TAB>
