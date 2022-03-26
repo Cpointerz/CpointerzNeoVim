@@ -59,7 +59,7 @@ nmap cu :CocUpdate<CR>
 nnoremap cc :CocList<CR>
 
 "set explorer
-nmap tt :NERDTree<CR>
+nnoremap tt :NERDTree<CR>
 autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
@@ -82,6 +82,7 @@ nnoremap tl :BufferLineCycleNext<CR>
 nnoremap th :BufferLineCyclePrev<CR>
 nnoremap tb :BufferLinePick<CR>
 nnoremap tc :tabclose<CR>
+nnoremap te :terminal<CR>
 
 "set TAB
 inoremap <silent><expr> <TAB>
