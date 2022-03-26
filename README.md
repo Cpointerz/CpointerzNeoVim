@@ -35,7 +35,8 @@ tl :切换至下一个TAB
 th :切换至上一个TAB 
 tb :切换至映射Buffer区，并可用字母快速切换Buffer 
 tc :关闭TAB   
-tt :目录树  
+tt :目录树
+te :Terminal  
 e :TagBar  
 pi :安装配置文件里指定的插件  
 pu :更新配置文件里指定的插件  
