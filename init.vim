@@ -22,6 +22,7 @@ Plug 'https://hub.fastgit.xyz/kyazdani42/nvim-web-devicons'
 Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim'
 Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
 Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
+Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
 call plug#end()
 
 "========================= key ========================= 
@@ -35,6 +36,7 @@ let g:tagbar_right = 1
 "set themes
 colorscheme gruvbox
 set background=dark
+let g:rainbow_active = 1
 
 set termguicolors
 lua << EOF
