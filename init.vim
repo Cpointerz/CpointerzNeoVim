@@ -20,7 +20,7 @@ Plug 'https://hub.fastgit.xyz/preservim/tagbar'
 Plug 'https://hub.fastgit.xyz/neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://hub.fastgit.xyz/kyazdani42/nvim-web-devicons'
 Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim'
-Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
+Plug 'https://hub.fastgit.xyz/marko-cerovac/material.nvim'
 Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
 Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
 call plug#end()
@@ -34,12 +34,12 @@ let g:tagbar_width = 30
 let g:tagbar_right = 1
 
 "set themes
-colorscheme gruvbox
-set background=dark
+colorscheme material
+let g:material_style = "oceanic"
 let g:rainbow_active = 1
-
 set termguicolors
 lua << EOF
+require('material').setup()
 require("bufferline").setup{}
 EOF
 
