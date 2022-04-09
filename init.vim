@@ -73,6 +73,9 @@ nnoremap sh <c-w><c-h>
 nnoremap sj <c-w><c-j>
 nnoremap sk <c-w><c-k>
 
+"ESC
+inoremap jk <ESC>
+
 "write
 nnoremap w :w<CR>
 "close
@@ -110,7 +113,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.7                                   ',
+     \ '                                V3.1.8                                   ',
      \ '',
      \ ]
 
