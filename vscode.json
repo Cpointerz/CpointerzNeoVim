@@ -1,0 +1,61 @@
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        },
+    ], 
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["q"],
+            "commands": [":q"]
+        },
+        {
+            "before": ["w"],
+            "commands": [":w"],
+        },
+        {
+            "before": ["t", "e"],
+            "commands": [":term"]
+        },
+        {
+            "before": ["s", "v"],
+            "commands": [":vs"]
+        },
+        {
+            "before": ["s", "p"],
+            "commands": [":sp"]
+        },
+        {
+            "before": ["s", "l"],
+            "after": ["<c-w>", "<c-l>"]
+        },
+        {
+            "before": ["s", "h"],
+            "after": ["<c-w>", "<c-h>"]
+        },
+        {
+            "before": ["s", "j"],
+            "after": ["<c-w>", "<c-j>"]
+        },
+        {
+            "before": ["s", "k"],
+            "after": ["<c-w>", "<c-k>"]
+        },
+        {
+            "before": ["t", "n"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["t", "l"],
+            "commands": [":tabnext"]
+        },
+        {
+            "before": ["t", "h"],
+            "commands": [":tabprev"]
+        },
+        {
+            "before": ["t", "c"],
+            "commands": [":tabclose"]
+        },
+    ],
+    "workbench.editor.untitled.hint": "hidden",
