@@ -1,0 +1,25 @@
+set encoding=utf-8
+set mouse=a
+let mapleader="\<CR>"
+set number
+
+nnoremap sv :vs<CR>
+nnoremap sp :sp<CR>
+nnoremap sl <c-w><c-l>
+nnoremap sh <c-w><c-h>
+nnoremap sj <c-w><c-j>
+nnoremap sk <c-w><c-k>
+
+"ESC
+inoremap jk <ESC>
+
+"write
+nnoremap w :w<CR>
+"close
+nnoremap q :q<CR>
+
+"tab
+nnoremap tn :tabnew<CR>
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
+nnoremap tc :tabclose<CR>
