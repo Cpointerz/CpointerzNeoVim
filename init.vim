@@ -19,7 +19,7 @@ Plug 'https://hub.fastgit.xyz/liuchengxu/vim-clap'
 Plug 'https://hub.fastgit.xyz/preservim/tagbar'
 Plug 'https://hub.fastgit.xyz/neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://hub.fastgit.xyz/kyazdani42/nvim-web-devicons'
-Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim'
+Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'https://hub.fastgit.xyz/marko-cerovac/material.nvim'
 Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
 Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
