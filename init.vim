@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/plug')
 Plug 'https://hub.fastgit.xyz/preservim/nerdtree'
 Plug 'https://hub.fastgit.xyz/glepnir/dashboard-nvim'
 Plug 'https://hub.fastgit.xyz/liuchengxu/vim-clap'
-Plug 'https://hub.fastgit.xyz/preservim/tagbar'
+Plug 'https://hub.fastgit.xyz/liuchengxu/vista.vim'
 Plug 'https://hub.fastgit.xyz/neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://hub.fastgit.xyz/kyazdani42/nvim-web-devicons'
 Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim', { 'tag': 'v2.*' }
@@ -27,11 +27,10 @@ call plug#end()
 
 "========================= key ========================= 
 
-"set Tagbar
-nmap e :TagbarToggle<CR>
-let g:tagbar_ctags_bin = '/usr/bin/ctags'
-let g:tagbar_width = 30
-let g:tagbar_right = 1
+"set vista_ctags
+nnoremap e :Vista<CR>
+let g:vista#renderer#enable_icon = 1
+let g:vista_default_executive = 'ctags'
 
 "set themes
 colorscheme material
@@ -113,7 +112,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.8                                   ',
+     \ '                                V3.1.9                                   ',
      \ '',
      \ ]
 
