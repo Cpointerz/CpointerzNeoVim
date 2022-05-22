@@ -50,7 +50,7 @@ q :退出
 fa CR :搜索单词  
 ff CR :搜索文件  
 fh CR :搜索记录  
-fc CR :修改颜色  
+fc CR :修改主题（内置了material ocean和gruvbox)  
 fb CR :标签  
 ```  
 ## INSERT模式
