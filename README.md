@@ -1,4 +1,4 @@
-# CpointerzNeoVim
+# CpointerzNeoVim发布一周年啦～   时间真的很快啊，再过一个月我就要中考了，中考加油！！！
 
 一个初三的小垃圾的配置文件。也就写着玩，刚好满足自己的需求。发上来只是为了让更多人了解到NeoVim  
 vscode.json是一个能在vscode上跑的配置文件，只含有少量的快捷键绑定  
