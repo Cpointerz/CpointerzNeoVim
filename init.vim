@@ -25,6 +25,7 @@ Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
 Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
 Plug 'https://hub.fastgit.xyz/wakatime/vim-wakatime'
 Plug 'https://hub.fastgit.xyz/mg979/vim-visual-multi'
+Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
 call plug#end()
 
 "========================= key ========================= 
@@ -119,13 +120,13 @@ let g:dashboard_custom_header = [
      \ ]
 
 let g:dashboard_custom_shortcut={
-      \ 'last_session' : 'f l CR',
-      \ 'find_history' : 'f h CR',
-      \ 'find_file' : 'f f CR',
-      \ 'new_file' : 'c n CR',
-      \ 'change_colorscheme' : 'f c CR',
-      \ 'find_word' : 'f a CR',
-      \ 'book_marks' : 'f b CR',
+      \ 'last_session' : 'f l',
+      \ 'find_history' : 'f h',
+      \ 'find_file' : 'f f',
+      \ 'new_file' : 'c n',
+      \ 'change_colorscheme' : 'f c',
+      \ 'find_word' : 'f a',
+      \ 'book_marks' : 'f b',
       \ }
      
 nnoremap <silent> fh :<C-u>Clap history<CR>
