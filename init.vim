@@ -24,6 +24,7 @@ Plug 'https://hub.fastgit.xyz/marko-cerovac/material.nvim'
 Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
 Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
 Plug 'https://hub.fastgit.xyz/wakatime/vim-wakatime'
+Plug 'https://hub.fastgit.xyz/mg979/vim-visual-multi'
 call plug#end()
 
 "========================= key ========================= 
@@ -113,7 +114,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.1.9                                   ',
+     \ '                                V3.2.0                                   ',
      \ '',
      \ ]
 
@@ -127,11 +128,11 @@ let g:dashboard_custom_shortcut={
       \ 'book_marks' : 'f b CR',
       \ }
      
-nnoremap <silent> fh<Leader> :<C-u>Clap history<CR>
-nnoremap <silent> ff<Leader> :<C-u>Clap files<cr>
-nnoremap <silent> fc<Leader> :<C-u>Clap colors<CR>
-nnoremap <silent> fa<Leader> :<C-u>Clap blines<CR>
-nnoremap <silent> fb<Leader> :<C-u>Clap marks<CR>
+nnoremap <silent> fh :<C-u>Clap history<CR>
+nnoremap <silent> ff :<C-u>Clap files<CR>
+nnoremap <silent> fc :<C-u>Clap colors<CR>
+nnoremap <silent> fa :<C-u>Clap blines<CR>
+nnoremap <silent> fb :<C-u>Clap marks<CR>
 
 let g:dashboard_default_executive ='clap'
 
