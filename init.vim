@@ -53,7 +53,7 @@ let g:clap_theme = 'material_design_dark'
 "Install_plug function
 nmap pi :PlugInstall<CR>
 
-nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd coc-java<CR>
+nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd<CR>
 
 "update_plug function
 nmap pu :PlugUpdate<CR>
