@@ -26,6 +26,9 @@ Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
 Plug 'https://hub.fastgit.xyz/wakatime/vim-wakatime'
 Plug 'https://hub.fastgit.xyz/mg979/vim-visual-multi'
 Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
+Plug 'https://hub.fastgit.xyz/rakr/vim-one'
+Plug 'https://hub.fastgit.xyz/feline-nvim/feline.nvim'
+Plug 'https://hub.fastgit.xyz/lewis6991/gitsigns.nvim'
 call plug#end()
 
 "========================= key ========================= 
@@ -42,6 +45,8 @@ let g:rainbow_active = 1
 set termguicolors
 lua << EOF
 require('material').setup()
+require('feline').setup()
+require('gitsigns').setup()
 require("bufferline").setup{}
 EOF
 
@@ -53,7 +58,7 @@ let g:clap_theme = 'material_design_dark'
 "Install_plug function
 nmap pi :PlugInstall<CR>
 
-nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd<CR>
+nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd coc-java<CR>
 
 "update_plug function
 nmap pu :PlugUpdate<CR>
@@ -115,7 +120,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.2.0                                   ',
+     \ '                                V3.2.1                                   ',
      \ '',
      \ ]
 
