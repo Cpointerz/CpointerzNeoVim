@@ -23,7 +23,6 @@ Plug 'https://hub.fastgit.xyz/akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'https://hub.fastgit.xyz/marko-cerovac/material.nvim'
 Plug 'https://hub.fastgit.xyz/ryanoasis/vim-devicons'
 Plug 'https://hub.fastgit.xyz/luochen1990/rainbow'
-Plug 'https://hub.fastgit.xyz/wakatime/vim-wakatime'
 Plug 'https://hub.fastgit.xyz/mg979/vim-visual-multi'
 Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
 Plug 'https://hub.fastgit.xyz/rakr/vim-one'
