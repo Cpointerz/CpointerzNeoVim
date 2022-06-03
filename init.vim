@@ -8,6 +8,7 @@ let mapleader="\<CR>"
 set number
 set tabstop=4
 set shiftwidth=4
+set clipboard=unnamedplus
 filetype plugin indent on
 
 "Install_plug
