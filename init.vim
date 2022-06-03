@@ -28,6 +28,7 @@ Plug 'https://hub.fastgit.xyz/morhetz/gruvbox'
 Plug 'https://hub.fastgit.xyz/rakr/vim-one'
 Plug 'https://hub.fastgit.xyz/feline-nvim/feline.nvim'
 Plug 'https://hub.fastgit.xyz/lewis6991/gitsigns.nvim'
+Plug 'https://hub.fastgit.xyz/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 "========================= key ========================= 
@@ -47,6 +48,30 @@ require('material').setup()
 require('feline').setup()
 require('gitsigns').setup()
 require("bufferline").setup{}
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "c", "cpp", "lua", "rust", "java", "python", "go"},
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = true,
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+    -- the name of the parser)
+    -- list of language that will be disabled
+    disable = {},
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
 EOF
 
 "vim-clap
@@ -57,7 +82,7 @@ let g:clap_theme = 'material_design_dark'
 "Install_plug function
 nmap pi :PlugInstall<CR>
 
-nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd coc-java<CR>
+nmap ci :CocInstall coc-pyright coc-rust-analyzer coc-clangd coc-java coc-go<CR>
 
 "update_plug function
 nmap pu :PlugUpdate<CR>
@@ -119,7 +144,7 @@ let g:dashboard_custom_header = [
      \ '.::   .:: :: .::   .::  .:: .:: .::  .::  .::  .:         .::     .::    ',
      \ '   .::::  .::        .::    .::.:::  .::   .::   .::::   .:::   .::::::::',
      \ '          .::                                                            ',
-     \ '                                V3.2.1                                   ',
+     \ '                                V3.2.2                                   ',
      \ '',
      \ ]
 
