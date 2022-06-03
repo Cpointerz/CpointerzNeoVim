@@ -22,7 +22,7 @@ go install golang.org/x/tools/gopls@latest
 [nerd-fonts(FiraCode)需要额外安装](https://github.com/ryanoasis/nerd-fonts)  
 
 ## 快速安装所有模块  
-p i + c i: 安装Rust/Java/Python的语言支持模块  
+p i + c i: 安装Rust/Java/Python/C++/C/Go的语言支持模块  
 
 # 已配置的快捷键
 
