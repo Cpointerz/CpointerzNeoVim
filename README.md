@@ -14,7 +14,8 @@ curl https://gitee.com/Cpointerz/vim-plug/raw/master/plug.vim > ~/.config/nvim/a
 
 ## 首次使用  
 安装```sudo apt install universal-ctags npm git fonts-firacode clangd```  
-如需使用GO，还应该```
+如需使用GO，还应该  
+```
 go env -w GOPROXY=https://goproxy.cn(下载加速，可略过)
 go install golang.org/x/tools/gopls@latest
 ```
