@@ -1,10 +1,9 @@
-# CpointerzNeoVim发布一周年啦～   时间真的很快啊，再过一个月我就要中考了，中考加油！！！
+# CpointerzNeoVim
 
 一个初三的小垃圾的配置文件。也就写着玩，刚好满足自己的需求。发上来只是为了让更多人了解到NeoVim  
 vscode.json是一个能在vscode上跑的配置文件，只含有少量的快捷键绑定  
 
 # 安装  
-### wakatime可以删除，不影响正常使用，但是可以统计coding时间和数量
 ```
 git clone https://gitee.com/Cpointerz/CpointerzNeoVim.git ~/.config/nvim  
 mkdir ~/.config/nvim/autoload/  
@@ -15,6 +14,10 @@ curl https://gitee.com/Cpointerz/vim-plug/raw/master/plug.vim > ~/.config/nvim/a
 
 ## 首次使用  
 安装```sudo apt install universal-ctags npm git fonts-firacode clangd```  
+如需使用GO，还应该```
+go env -w GOPROXY=https://goproxy.cn(下载加速，可略过)
+go install golang.org/x/tools/gopls@latest
+```
 [nerd-fonts(FiraCode)需要额外安装](https://github.com/ryanoasis/nerd-fonts)  
 
 ## 快速安装所有模块  
