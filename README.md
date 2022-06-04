@@ -56,12 +56,16 @@ ff CR :搜索文件
 fh CR :搜索记录  
 fc CR :修改主题（内置了material ocean、gruvbox、one)  
 fb CR :标签  
+[g :上一个ERROR/WARNING提示  
+]g :下一个ERROR/WARNING提示  
+K :当前函数文档
 ```  
 ## INSERT模式
 ```  
 jk :ESC
 Tab :下一个补全选项  
 Shift Tab :上一个补全选项  
+CR :选择当前补全选项  
 ```
 ## 多光标支持  
 ```  
